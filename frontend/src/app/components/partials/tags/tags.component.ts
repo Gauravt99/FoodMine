@@ -13,7 +13,9 @@ export class TagsComponent {
 
   constructor(private foodService: FoodService){
 
-    this.tags = foodService.getAllTags();
+    foodService.getAllTags().subscribe((tag) => {
+      this.tags = tag;
+    })
 
   }
 

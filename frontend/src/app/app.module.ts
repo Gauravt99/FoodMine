@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +16,10 @@ import { LoginPageComponent } from './components/pages/login-page/login-page.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { InputContainerComponent } from './components/partials/input-container/input-container.component';
+import { InputValidationComponent } from './components/partials/input-validation/input-validation.component';
+import { TextInputComponent } from './components/partials/text-input/text-input.component';
+import { DefaultButtonComponent } from './components/partials/default-button/default-button.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { ToastrModule } from 'ngx-toastr';
     CartPageComponent,
     TitleComponent,
     NotFoundComponent,
-    LoginPageComponent     
+    LoginPageComponent,
+    InputContainerComponent,
+    InputValidationComponent,
+    TextInputComponent,
+    DefaultButtonComponent     
   ],
   imports: [
     BrowserModule,
@@ -46,6 +54,7 @@ import { ToastrModule } from 'ngx-toastr';
      
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

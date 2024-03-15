@@ -25,6 +25,8 @@ router.get("/seed", asyncHandler(
     const {email, password} = req.body;
     const user = await UserModel.findOne({email});
 
+    console.log(user);
+    
      if(user && (await bcrypt.compare(password, user.password))) {
       res.send(generateTokenReponse(user));
      }
@@ -38,7 +40,7 @@ router.get("/seed", asyncHandler(
   
 const generateTokenReponse = (user : User) => {
   const token = jwt.sign({
-    email:user.email, isAdmin: user.isAdmin
+    id: user.id, email:user.email, isAdmin: user.isAdmin
   },process.env.JWT_SECRET!,{
     expiresIn:"30d"
   });

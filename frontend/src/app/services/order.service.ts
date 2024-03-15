@@ -1,0 +1,22 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Order } from '../shared/models/order';
+import { environment } from 'src/environments/environment.development';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class OrderService {
+
+  
+  apiURL : any = '';
+
+  constructor(private http:HttpClient) {
+    this.apiURL = environment.apiUrl;
+  }
+
+  create(order:Order){
+    return this.http.post<Order>(`${this.apiURL}/orders/create`, order);
+  }
+  
+}

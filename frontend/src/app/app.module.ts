@@ -4,7 +4,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { HeaderComponent } from './components/partials/header/header.component'; 
-import { RatingModule } from 'ng-starrating';
 import { SearchComponent } from './components/partials/search/search.component'; 
 import { FoodPageComponent } from './components/pages/food-page/food-page.component';
 import { TagsComponent } from './components/partials/tags/tags.component';
@@ -30,6 +29,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
 import { PaymentPageComponent } from './components/pages/payment-page/payment-page.component';
 import { PaypalButtonComponent } from './components/partials/paypal-button/paypal-button.component';
 import { OrderTrackPageComponent } from './components/pages/order-track-page/order-track-page.component';
+import { StarRatingComponent } from './components/partials/star-rating/star-rating.component';
 
 @NgModule({
   declarations: [
@@ -54,13 +54,13 @@ import { OrderTrackPageComponent } from './components/pages/order-track-page/ord
     MapComponent,
     PaymentPageComponent,
     PaypalButtonComponent,
-    OrderTrackPageComponent     
+    OrderTrackPageComponent,
+    StarRatingComponent     
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,    
-    //RatingModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,

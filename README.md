@@ -7,6 +7,8 @@
 
 2. Paypal payment gateway is implemented in this project
 
+   ** https://developer.paypal.com **
+
    1. Login id to login paypal sandbox account : dreamteam****@gmail.com (replace * with real numbers)
    2. Do forgot the password while loging to the paypal sandbox account
    3. While doing payment through paypal payment use below email id & password (from paypal sandbox       account) 

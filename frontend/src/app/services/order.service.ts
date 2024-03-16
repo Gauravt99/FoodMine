@@ -28,4 +28,8 @@ export class OrderService {
     return this.http.post<string>(`${this.apiURL}/orders/pay`,order);
   }
 
+  trackOrderById(id:number): Observable<Order>{
+    return this.http.get<Order>(`${this.apiURL}/orders/track/` + id);
+  }
+
 }

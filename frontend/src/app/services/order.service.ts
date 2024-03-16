@@ -24,4 +24,8 @@ export class OrderService {
     return this.http.get<Order>(`${this.apiURL}/orders/newOrderForCurrentUser`);
   }
 
+  pay(order:Order):Observable<string>{
+    return this.http.post<string>(`${this.apiURL}/orders/pay`,order);
+  }
+
 }

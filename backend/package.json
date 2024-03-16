@@ -4,8 +4,8 @@
   "description": "api for the food mine ",
   "main": "index.js",
   "scripts": {
-    "start": "cd src && nodemon server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cd src && nodemon server.ts",     
+    "build": "npm install && tsc"
   },
   "author": "Gaurav Tak",
   "license": "ISC",
